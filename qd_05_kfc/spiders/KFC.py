@@ -46,8 +46,8 @@ class KfcSpider(scrapy.Spider):
             addressDetail = data['addressDetail']
             pro = data['pro']
             cityName = data['cityName']
-            item = Qd05KfcItem(rownum=rownum, storeName=storeName, addressDetail=addressDetail, pro=pro,
-                               cityName=cityName)
+            item = Qd05KfcItem(rownum=rownum, storeName=storeName, addressDetail=addressDetail,
+                               pro=pro,cityName=cityName)
             yield item
         time.sleep(1)
         print('传下来的 meta:', response.meta.get('page'))
